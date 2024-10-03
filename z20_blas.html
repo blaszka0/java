@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function AB()
+{
+var xa= parseFloat(document.getElementById('xa').value);
+var ya= parseFloat(document.getElementById('ya').value);
+var xb= parseFloat(document.getElementById('xb').value);
+var yb= parseFloat(document.getElementById('yb').value);
+var xc= parseFloat(document.getElementById('xc').value);
+var yc= parseFloat(document.getElementById('yc').value);
+var ab= Math.sqrt(Math.pow(xa-xb,2)+Math.pow(ya-yb,2));
+document.getElementById("nazwa").innerHTML ="Bok AB= "+ab.toFixed(2)+"cm";
+}
+function BC()
+{
+var xa= parseFloat(document.getElementById('xa').value);
+var ya= parseFloat(document.getElementById('ya').value);
+var xb= parseFloat(document.getElementById('xb').value);
+var yb= parseFloat(document.getElementById('yb').value);
+var xc= parseFloat(document.getElementById('xc').value);
+var yc= parseFloat(document.getElementById('yc').value);
+var bc= Math.sqrt(Math.pow(xb-xc,2)+Math.pow(yb-yc,2));
+document.getElementById("nazwa").innerHTML ="Bok BC= "+bc.toFixed(2)+"cm";
+}
+function CA()
+{
+var xa= parseFloat(document.getElementById('xa').value);
+var ya= parseFloat(document.getElementById('ya').value);
+var xb= parseFloat(document.getElementById('xb').value);
+var yb= parseFloat(document.getElementById('yb').value);
+var xc= parseFloat(document.getElementById('xc').value);
+var yc= parseFloat(document.getElementById('yc').value);
+var ca= Math.sqrt(Math.pow(xc-xa,2)+Math.pow(yc-ya,2));
+document.getElementById("nazwa").innerHTML ="Bok CA= "+ca.toFixed(2)+"cm";
+}
+</script>
+<h1>Boki trójkąta ABC</h1><br><br>
+Podaj x punktu a: <input type="text" id="xa" value="podaj punkt"><br><br><br>
+Podaj y punktu a: <input type="text" id="ya" value="podaj punkt"><br><br><br>
+Podaj x punktu b: <input type="text" id="xb" value="podaj punkt"><br><br><br>
+Podaj y punktu b: <input type="text" id="yb" value="podaj punkt"><br><br><br>
+Podaj x punktu c: <input type="text" id="xc" value="podaj punkt"><br><br><br>
+Podaj y punktu c: <input type="text" id="yc" value="podaj punkt"><br><br><br>
+<input type="button" name="bok" value="Oblicz bok AB" Onclick="AB()"><br><br>
+<input type="button" name="bok" value="Oblicz bok BC" Onclick="BC()"><br><br> 
+<input type="button" name="bok" value="Oblicz bok CA" Onclick="CA()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
