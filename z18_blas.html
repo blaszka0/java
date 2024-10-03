@@ -1,0 +1,38 @@
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:navy;font-size:50px;">
+<script language="JavaScript">
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+var c;
+var d;
+function suma_blas(a, b) {
+return a + b;
+}
+function odejmowanie_blas(a, b) {
+return a - b;
+}
+function mnozenie_blas(a, b) {
+return a * b;
+}
+function kwadratu_a_blas(a) {
+    return a*a;
+}
+function kwadratu_b_blas(b) {
+return b*b;
+}
+function reszta_z_dzielenia_a_przez_b_blas(a,b){
+    return a%b;
+}
+document.write("suma="+suma_blas(a,b)+"<br>");
+document.write("odejmowanie="+odejmowanie_blas(a,b)+"<br>");
+document.write("mnozenie="+mnozenie_blas(a,b)+"<br>");
+document.write("a do kwadratu="+kwadratu_a_blas(a)+"<br>");
+document.write("b do kwadratu="+kwadratu_b_blas(b)+"<br>");
+document.write("reszta z dzielenia a przez b="+reszta_z_dzielenia_a_przez_b_blas(a,b)+"<br>");
+</script>
+</div>
+</body>
+</html>
