@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_zadanko()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+<textarea name="zadanko" cols="80" rows="20" readonly>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+ function pole_sze()
+ {
+var a= parseFloat(document.getElementById('dlugosc').value);
+var b= a*a;
+ document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b.toFixed(2)+" cm^2";
+ }
+ function obwod_sze()
+ {
+var a= parseFloat(document.getElementById('dlugosc').value);
+var b= 4*a;
+ document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b.toFixed(2)+" cm";
+ }
+</script>
+ <h1>Wszystko o KWADRACIE</h1><br><br>
+ Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+ <input type="button" name="pole" value="Oblicz pole" Onclick="pole_sze()"><br><br>
+ <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_sze()"><br><br>
+ <div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanko()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
