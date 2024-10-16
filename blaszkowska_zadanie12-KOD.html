@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_zadanko()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form> <textarea name="zadanko" cols="80" rows="20" readonly> zadanie12.html
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:green;font-size:60px;">
+<script language="JavaScript">
+var D1_sze=prompt("D1=","");
+var G1_sze=prompt("G1=","");
+var D2_sze=prompt("D2=","");
+var G2_sze=prompt("G2=","");
+var sekund;
+var a=parseFloat(D1_sze);
+var b=parseFloat(D2_sze);
+var c=parseFloat(G1_sze);
+var d=parseFloat(G2_sze);
+sekund=3600*(24*(a-b)-(d-c));
+document.write("ilość sekund= "+sekund+" sekund <br>");
+</script>
+</div>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanko()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
