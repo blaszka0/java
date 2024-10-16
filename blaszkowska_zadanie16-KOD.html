@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_zadanko()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<form>
+<textarea name="zadanko" cols="80" rows="20" readonly> 
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:blue;font-size:50px;">
+<script language="JavaScript">
+var a_sze=prompt("A=","");
+var a=parseFloat(a_sze);
+var b_sze=prompt("B=","");
+var b=parseFloat(b_sze);
+var ab;
+var abb;
+var abbb;
+var bbb;
+var odp;
+ab = a + b;
+abb = ab * b;
+abbb = abb * b;
+bbb = b * b * b;
+odp = a + abb + abbb + bbb;
+document.write("("+a+" + "+b+")^"+ab+"="+a+"^"+ab+" + "+ab+"*(("+a+")^"+b+")*("+b+") + "+ab+"*("+a+")*(("+b+")^"+b+") + "+b+"^"+ab+" = "+a+" + "+abb+" + "+abbb+" + "+bbb+" = "+odp+"<br>");
+</script>
+</div>
+</body>
+</html>
+</textarea>
+</form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanko()"/>
+<script type="text/javascript">
+</script>
+</body>
+</html>
