@@ -17,13 +17,13 @@ window.close()
 </head>
 <body>
 <script type="text/javascript">
- function pole_sze()
+ function pole_bla()
  {
 var a= parseFloat(document.getElementById('dlugosc').value);
 var b= a*a;
  document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b.toFixed(2)+" cm^2";
  }
- function obwod_sze()
+ function obwod_bla()
  {
 var a= parseFloat(document.getElementById('dlugosc').value);
 var b= 4*a;
@@ -32,8 +32,8 @@ var b= 4*a;
 </script>
  <h1>Wszystko o KWADRACIE</h1><br><br>
  Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
- <input type="button" name="pole" value="Oblicz pole" Onclick="pole_sze()"><br><br>
- <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_sze()"><br><br>
+ <input type="button" name="pole" value="Oblicz pole" Onclick="pole_bla()"><br><br>
+ <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_bla()"><br><br>
  <div style="color:red;font-size:50px;"id="nazwa"></div>
 </body>
 </html>
