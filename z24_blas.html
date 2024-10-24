@@ -1,0 +1,69 @@
+<html>
+<head>
+<script language="JavaScript">
+function Y1(d,x)
+{
+c = parseFloat(d)
+d = parseFloat(x)
+Y1_w = 3 * Math.pow(c, 9 / 11)
+document.getElementsByName('y1')[0].value = Y1_w.toFixed(2);
+alert("Y1=" + Y1_w.toFixed(2));
+pokaz1.innerHTML = "Y1=" + Y1_w.toFixed(2) + "<br>";
+}
+function Y2(d, x) {
+c = parseFloat(d)
+d = parseFloat(x)
+c = (c * Math.PI) / 180;
+var cos = Math.cos(c)
+var sin = Math.sin(c)
+Y2_w = 2 * cos + 3 * sin;
+document.getElementsByName('y2')[0].value = Y2_w.toFixed(2);
+alert("Y2=" + Y2_w.toFixed(2));
+pokaz2.innerHTML = "Y2=" + Y2_w.toFixed(2) + "<br>";
+}
+function Y3(d, x) {
+x1 = parseFloat(d)
+x2 = parseFloat(x)
+var f = Math.pow(x1, 5);
+var e = 2 * Math.pow(x2, 4);
+Y3_w = Math.pow(f + e * Math.abs(x1 - x2), 1 / 3);
+document.getElementsByName('y3')[0].value = Y3_w.toFixed(2);
+alert("Y3=" + Y3_w.toFixed(2));
+pokaz3.innerHTML = "Y3=" + Y3_w.toFixed(2) + "<br>";
+}
+</script>
+</head>
+<body>
+Obliczanie Y1, Y2 i Y3
+<br><br>
+<form name="formularz" action=""
+onsubmit="Y1(this.x1.value,this.x2.value);
+Y2(this.x1.value,this.x2.value);
+Y3(this.x1.value,this.x2.value);return false">
+Podaj x1=
+<input size="6" name="x1">
+Podaj x2=
+<input size="6" name="x2">
+<br><br>
+<input type="submit" value="oblicz">
+<br><br>
+Y1=
+<input size="6" name="y1">
+Y2=
+<input size="6" name="y2">
+Y3=
+<input size="6" name="y3">
+</form>
+<table>
+<tr>
+<td id="pokaz1"></td>
+</tr>
+<tr>
+<td id="pokaz2"></td>
+</tr>
+<tr>
+<td id="pokaz3"></td>
+</tr>
+</table>
+</body>
+</html>
