@@ -1,57 +1,61 @@
+<!DOCTYPE html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+<textarea readonly>
+  <!DOCTYPE html>
 <html>
-<head>
-<script type="text/javascript">
-function okno_zamknij_zadanko()
-{
-window.close()
-}
-</script>
-</head>
-<body>
-<form>
-<textarea name="zadanko" cols="80" rows="20" readonly>
-<head>
-<meta charset="utf-8">
-</head>
-<body>
-<div style="color:navy;font-size:50px;">
-<script language="JavaScript">
-var a=parseFloat(prompt("a=",""));
-var b=parseFloat(prompt("b=",""));
-var c;
-var d;
-function suma_bla(a, b) {
-return a + b;
-}
-function odejmowanie_bla(a, b) {
-return a - b;
-}
-function mnozenie_bla(a, b) {
-return a * b;
-}
-function kwadratu_a_bla(a) {
-    return a*a;
-}
-function kwadratu_b_bla(b) {
-return b*b;
-}
-function reszta_z_dzielenia_a_przez_b_bla(a,b){
-    return a%b;
-}
-document.write("suma="+suma_bla(a,b)+"<br>");
-document.write("odejmowanie="+odejmowanie_bla(a,b)+"<br>");
-document.write("mnozenie="+mnozenie_bla(a,b)+"<br>");
-document.write("a do kwadratu="+kwadratu_a_bla(a)+"<br>");
-document.write("b do kwadratu="+kwadratu_b_bla(b)+"<br>");
-document.write("reszta z dzielenia a przez b="+reszta_z_dzielenia_a_przez_b_bla(a,b)+"<br>");
-</script>
-</div>
-</body>
+  <head>
+    <title> Użycie fukcji </title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <div style="color:navy;font-size:50px;">
+      <script>
+        let a = parseFloat(prompt("a=", ''));
+        let b = parseFloat(prompt("b=", ''));
+
+        function suma_bla(a, b) {
+          return a + b;
+        }
+
+        function diff_bla(a, b) {
+          return a - b;
+        }
+
+        function multi_bla(a, b) {
+          return a * b;
+        }
+
+        function square_bla(a, b) {
+          return `a^2 = ${a ** 2}, b^2 = ${b ** 2}`;
+        }
+
+        function remainder_bla(a, b) {
+          return a % b;
+        }
+
+        document.write("suma=" + suma_bla(a, b) + "<br>");
+        document.write("odejmowanie=" + diff_bla(a, b) + "<br>");
+        document.write("mnożenie=" + multi_bla(a, b) + "<br>");
+        document.write("do kwadratu=" + square_bla(a, b) + "<br>");
+        document.write("reszta z dzielenia=" + remainder_bla(a, b) + "<br>");
+      </script>
+    </div>
+  </body>
 </html>
-</textarea>
-</form>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanko()"/>
-<script type="text/javascript">
-</script>
-</body>
+    </textarea>
+  </body>
 </html>
