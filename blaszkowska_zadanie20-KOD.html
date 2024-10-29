@@ -1,46 +1,88 @@
-<html>
-<head>
-<script type="text/javascript">
-function okno_zamknij_zadanko()
-{
-window.close()
-}
-</script>
-</head>
-<body>
-<form>
-<textarea name="zadanko" cols="80" rows="20" readonly>
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="styl.css">
-</head>
-<body>
-<script type="text/javascript">
- function pole_bla()
- {
-var a= parseFloat(document.getElementById('dlugosc').value);
-var b= a*a;
- document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b.toFixed(2)+" cm^2";
- }
- function obwod_bla()
- {
-var a= parseFloat(document.getElementById('dlugosc').value);
-var b= 4*a;
- document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b.toFixed(2)+" cm";
- }
-</script>
- <h1>Wszystko o KWADRACIE</h1><br><br>
- Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
- <input type="button" name="pole" value="Oblicz pole" Onclick="pole_bla()"><br><br>
- <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_bla()"><br><br>
- <div style="color:red;font-size:50px;"id="nazwa"></div>
-</body>
-</html>
-</textarea>
-</form>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanko()"/>
-<script type="text/javascript">
-</script>
-</body>
+<!DOCTYPE html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+    <style>
+      textarea {
+        color:rgb(102, 102, 102); 
+        font-size:15px; 
+        resize: none;
+        height: 90vh;
+        width: 90vw;
+      }
+    </style>
+  </head>
+  <body>
+<textarea readonly>
+  <html>
+
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  
+  <body>
+    <script>
+      function AB_bla() {
+        let aX_bla = parseFloat(document.getElementById('aX').value);
+        let aY_bla = parseFloat(document.getElementById('aY').value);
+  
+        let bX_bla = parseFloat(document.getElementById('bX').value);
+        let bY_bla = parseFloat(document.getElementById('bY').value);
+  
+  
+        document.getElementById("answer").innerHTML = "|AB|= "
+          + (Math.sqrt((aX_bla - bX_bla) ** 2 + (aY_bla - bY_bla) ** 2)).toFixed(2);
+      }
+  
+      function BC_mys() {
+        let bX_bla = parseFloat(document.getElementById('bX').value);
+        let bY_bla = parseFloat(document.getElementById('bY').value);
+  
+        let cX_bla = parseFloat(document.getElementById('cX').value);
+        let cY_bla = parseFloat(document.getElementById('cY').value);
+  
+        document.getElementById("answer").innerHTML = "|BC|= "
+          + (Math.sqrt((cX_bla - bX_bla) ** 2 + (cY_bla - bY_bla) ** 2)).toFixed(2);
+      }
+  
+      function AC_bla() {
+        let aX_bla = parseFloat(document.getElementById('aX').value);
+        let aY_bla = parseFloat(document.getElementById('aY').value);
+        let cX_bla = parseFloat(document.getElementById('cX').value);
+        let cY_bla = parseFloat(document.getElementById('cY').value);
+  
+        document.getElementById("answer").innerHTML = "|AC|= "
+          + (Math.sqrt((aX_bla - cX_bla) ** 2 + (aY_bla - cY_bla) ** 2)).toFixed(2);
+      }
+  
+    </script>
+  
+    Podaj X punktu A: <input type="text" id="aX"><br>
+    Podaj Y punktu A: <input type="text" id="aY"><br>
+    <br>
+    <br>
+    Podaj X punktu B: <input type="text" id="bX"><br>
+    Podaj Y punktu B: <input type="text" id="bY"><br>
+    <br>
+    <br>
+    Podaj X punktu C: <input type="text" id="cX"><br>
+    Podaj Y punktu C: <input type="text" id="cY"><br>
+    <br>
+    <br>
+  
+  
+    <input type="button" value="Oblicz AB" onclick="AB_bla()"><br>
+    <br>
+    <input type="button" value="Oblicz BC" onclick="BC_bla()"><br>
+    <br>
+    <input type="button" value="Oblicz AC" onclick="AC_bla()"><br>
+    <br>
+    <br>
+  
+    <div style="color:red;font-size:50px;" id="answer"></div>
+  </body>
+  
+  </html>
+    </textarea>
+  </body>
 </html>
