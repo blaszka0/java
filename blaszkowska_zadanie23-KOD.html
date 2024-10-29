@@ -1,71 +1,87 @@
-<html>
+<!DOCTYPE html>
+
 <head>
-<script type="text/javascript">
-function okno_zamknij_zadanko()
-{
-window.close()
-}
-</script>
+  <title> proste obliczenia</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
 </head>
+
 <body>
-<form>
-<textarea name="zadanko" cols="80" rows="20" readonly>
-<html>
+  <textarea readonly>
+    <html>
+
 <head>
-<script language="JavaScript">
-function Drabina(d,x)
-{
-c=parseFloat(d)
-d=parseFloat(x)
-Drabina_w=Math.sqrt((c*c)+(d*d))
-document.getElementsByName('drab')[0].value=Drabina_w.toFixed(2);
-alert("Drabina="+Drabina_w.toFixed(2)+" cm");
-pokaz1.innerHTML="Drabina="+Drabina_w.toFixed(2)+" cm"+"<br>";
-}
-function Alfa(d,x)
-{
-c=parseFloat(d)
-d=parseFloat(x)
-var sinA = c/Math.sqrt((c*c)+(d*d));
-var aRad = Math.asin(sinA);
-var aDeg = aRad * (180 / Math.PI);
-Alfa_w=aDeg;
-document.getElementsByName('alfa')[0].value=Alfa_w.toFixed(2);
-alert("Alfa="+Alfa_w.toFixed(2));
-pokaz2.innerHTML="Alfa="+Alfa_w.toFixed(2)+"<br>";
-}
-</script>
+  <title>
+    Obliczenia pola i obwodu
+  </title>
+  <script language="JavaScript">
+    function calcHypotenus(d, x) {
+      return Math.sqrt(d ** 2 + x ** 2);
+    }
+
+    function findAngle(d, x) {
+      const radian = Math.atan(d / x);
+      const degree = radian * (180 / Math.PI);
+      return degree;
+    }
+
+    function calcHypoAngle(event) {
+      event.preventDefault();
+
+      const d = parseFloat(document.querySelector('[name="D"]').value);
+      const x = parseFloat(document.querySelector('[name="X"]').value);
+
+      const hypo = calcHypotenus(d, x);
+      const alfa = findAngle(d, x);
+
+      const poleOutput = document.querySelector('#wyprowadz_drabina');
+      const obwodOutput = document.querySelector('#wyprowadz_alfa');
+
+      poleOutput.textContent = hypo.toFixed(2);
+      obwodOutput.textContent = alfa.toFixed(2);
+    }
+  </script>
 </head>
+
 <body>
-Obliczanie odległości od drabiny i kąta
-<br><br>
-<form name="formularz" action="" onsubmit="Drabina(this.bok_d.value,this.bok_x.value); Alfa(this.bok_d.value,this.bok_x.value);return false">
-Podaj d=
-<input size="6" name="bok_d">
-Podaj x=
-<input size="6" name="bok_x">
-<br><br>
-<input type="submit" value="oblicz" >
-<br><br>
-Drabina=
-<input size="6" name="drab">
-Alfa=
-<input size="6" name="alfa">
-</form>
-<table>
-<tr>
-<td id="pokaz1"></td>
-</tr>
-<tr>
-<td id="pokaz2"></td>
-</tr>
-</table>
+  <h1>Obliczenia obwodu i pola prostokąta</h1>
+  <br> <br>
+  <form name="formularz" action="#" onsubmit="calcHypoAngle(event); return false;">
+    <label>
+      Podaj D=
+      <input type="number" step="0.001" name="D">
+    </label>
+
+    <label>
+      Podaj X=
+      <input type="number" step="0.001" name="X">
+    </label>
+
+    <input TYPE="submit" Value="oblicz">
+  </form>
+
+  <table style="text-align: left;">
+    <tr>
+      <th>Drabina = </th>
+      <td id="wyprowadz_drabina"></td>
+    </tr>
+    <tr>
+      <th>Alfa = </th>
+      <td id="wyprowadz_alfa"></td>
+    </tr>
+  </table>
 </body>
+
 </html>
-</textarea>
-</form>
-<input type="button" value="zamknij okno" onclick="okno_zamknij_zadanko()"/>
-<script type="text/javascript">
-</script>
+    </textarea>
 </body>
+
 </html>
